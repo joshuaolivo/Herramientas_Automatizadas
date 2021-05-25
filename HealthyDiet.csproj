@@ -233,7 +233,6 @@
     <Compile Include="clases\cCalories.cs" />
     <Compile Include="clases\cConnection.cs" />
     <Compile Include="clases\cHash.cs" />
-    <Compile Include="clases\Class1.cs" />
     <Compile Include="clases\cPlan.cs" />
     <Compile Include="clases\cQueys.cs" />
     <Compile Include="front\fatSecretAPI\API.aspx.cs">
