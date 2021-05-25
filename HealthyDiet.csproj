@@ -236,7 +236,6 @@
     <Compile Include="clases\cHash.cs" />
     <Compile Include="clases\cPlan.cs" />
     <Compile Include="clases\cQueys.cs" />
-    <Compile Include="clases\Kioñaa.cs" />
     <Compile Include="front\fatSecretAPI\API.aspx.cs">
       <DependentUpon>API.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
