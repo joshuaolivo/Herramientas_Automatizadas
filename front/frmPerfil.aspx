@@ -25,7 +25,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item active"><a class="nav-link" href="frmPrincipal.aspx">Inicio <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="frmPrincipal.aspx">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="frmLog.aspx">Cerrar sesión</a></li>
                         </ul>
                     </div>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="alert alert-info">
-                        Si tu información está mal, cuentas con 1 días para cambiar la información.
+                        Información registrada el: <asp:Label ID="lblFecha" runat="server" Text="Fecha"></asp:Label>
                     </div>
                 </div>
                 <div class="col bg-white text-center rounded shadow p-3 m-1">
@@ -131,6 +131,7 @@
                     </div>
                 </div>
             </div>
+            <!--
             <div class="row justify-content-md-center p-1 tab-pane fade h-75" id="pills-edicion" role="tabpanel" aria-labelledby="pills-edicion-tab">
                 <div class="col bg-white text-center rounded shadow p-3 m-1">
                     <h3>Editar mi información</h3>
@@ -195,6 +196,7 @@
                     <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-success align-self-center badge-pill w-25" />
                 </div>
             </div>
+            -->
         </div>
         
         <asp:ScriptManager ID="smPageManager" ScriptMode="Release" runat="server">

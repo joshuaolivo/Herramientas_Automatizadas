@@ -23,8 +23,8 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item active"><a class="nav-link" href="index.aspx">Inicio <span class="sr-only">(current)</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="frmLog.aspx">Inicar sesión</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.aspx">Inicio</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="frmLog.aspx">Inicar sesión <span class="sr-only">(current)</span></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -37,13 +37,15 @@
                     <asp:Label ID="lblEmpresa" runat="server" Text="Label" CssClass="h5">HealthyDiet</asp:Label><br />
                     <asp:Label ID="lblSesion" runat="server" Text="Label" CssClass="h3">Iniciar Sesion</asp:Label><br />
                     <hr />
-                    <div class="form-group">
-                        <asp:Label ID="lblCorreo" runat="server" > Correo</asp:Label>
-                        <input class="form-control badge-pill border-success" type="email" runat="server" ID="txtCorreo" required/>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="lblContraseña" runat="server" type="">Contaraseña</asp:Label>
-                        <input class="form-control badge-pill border-success" type ="password" runat="server" id="txtContraseña" required/>
+                    <div class="m-4">
+                        <div class="form-group">
+                            <asp:Label ID="lblCorreo" runat="server" > Correo</asp:Label>
+                            <input class="form-control badge-pill border-success" type="email" runat="server" ID="txtCorreo" required/>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="lblContraseña" runat="server" type="">Contaraseña</asp:Label>
+                            <input class="form-control badge-pill border-success" type ="password" runat="server" id="txtContraseña" required/>
+                        </div>
                     </div>
                     <asp:Button ID="btnEnviar" runat="server" Text="Iniciar Sesión" OnClick="btnEnviar_Click" CssClass="btn btn-success"></asp:Button><br /> 
                     <asp:Label ID="lblRespuesta" runat="server" Text="HealthyDiet" Visible="false" ></asp:Label>
