@@ -17,7 +17,7 @@
         <div class ="cabecera">
             <header>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-success ">
-                    <a class="navbar-brand" href="index.aspx">
+                    <a class="navbar-brand" href="frmPrincipal.aspx">
                         <img src="../images/Icon.png" alt="" width="33" height="30" class="d-inline-block align-text-top" />
                         Healthy Diet</a>
                     <button class="navbar-toggler btn-success" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

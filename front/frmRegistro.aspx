@@ -25,7 +25,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item active"><a class="nav-link" href="frmPrincipal.aspx">Inicio <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="frmPrincipal.aspx">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="frmLog.aspx">Inicar sesión</a></li>
                         </ul>
                     </div>
