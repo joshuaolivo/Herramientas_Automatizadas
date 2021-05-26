@@ -115,6 +115,8 @@
     <Content Include="images\carrusel-8.jpg" />
     <Content Include="images\food-1920.jpg" />
     <Content Include="images\Icon.png" />
+    <Content Include="images\inf-dieta-ico.png" />
+    <Content Include="images\inf-personal-ico.png" />
     <Content Include="images\salad-1920.jpg" />
     <Content Include="images\salmon-1920.jpg" />
     <Content Include="images\strawberries-1920.jpg" />

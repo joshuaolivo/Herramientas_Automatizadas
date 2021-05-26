@@ -18,13 +18,12 @@ namespace HealthyDiet.front
             }
         }
 
-        protected void btnInfo_Click(object sender, EventArgs e)
+        protected void imgInfo_Click(object sender, ImageClickEventArgs e)
         {
-             Response.Redirect("frmPerfil.aspx?parametro=" + id);
+            Response.Redirect("frmPerfil.aspx?parametro=" + id);
         }
 
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void imgDieta_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("frmDieta.aspx?parametro=" + id);
         }

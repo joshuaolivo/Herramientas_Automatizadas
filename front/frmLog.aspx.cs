@@ -27,6 +27,7 @@ namespace HealthyDiet.front
             //}
             //else
             //{
+            //    lblRespuesta.Visible = true;;
             //    lblRespuesta.Text = "Error, correo o contraseña incorrectos";
             //}
 

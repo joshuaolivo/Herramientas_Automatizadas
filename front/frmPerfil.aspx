@@ -25,14 +25,14 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item active"><a class="nav-link" href="index.aspx">Inicio <span class="sr-only">(current)</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.aspx">¿Quienes somos?</a></li>
-                            <li class="nav-item"><a class="nav-link" href="frmLog.aspx">Inicar sesión</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="frmPrincipal.aspx">Inicio <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="frmLog.aspx">Cerrar sesión</a></li>
                         </ul>
                     </div>
                 </nav>
             </header>
         </div>
+        <!--
         <div class="nav bg-white m-0 p-0 justify-content-center">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item p-1">
@@ -43,6 +43,7 @@
                 </li>
             </ul>
         </div>
+        -->
         <div class="container bg-transparent tab-content" id="pills-tabContent">
             <div class="row justify-content-md-center p-1 tab-pane fade show active h-75" id="pills-resumen" role="tabpanel" aria-labelledby="pills-resumen-tab">
                 <div class="col bg-white text-center rounded shadow p-3 m-1">

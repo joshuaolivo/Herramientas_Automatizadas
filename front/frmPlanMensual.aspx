@@ -25,8 +25,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="index.aspx">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.aspx">¿Quienes somos?</a></li>
+                            <li class="nav-item"><a class="nav-link" href="frmPrincipal.aspx">Inicio</a></li>
                         </ul>
                     </div>
                 </nav>
