@@ -14,5 +14,22 @@ namespace HealthyDiet.front
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            //string pass = hash.HashPass(txtContraseña.Value);
+
+            //if (queys.Login(txtCorreo.Value, pass))
+            //{
+            //    lblRespuesta.Text = "Usuario Encontrado";
+            //}
+            //else
+            //{
+            //    lblRespuesta.Visible = true;;
+            //    lblRespuesta.Text = "Error, correo o contraseña incorrectos";
+            //}
+
+            Response.Redirect("frmPrincipal.aspx?parametro=465");
+        }
     }
 }

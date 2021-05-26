@@ -102,14 +102,14 @@
                     <div class="form-row align-items-center">
                         <div class="form-group col-auto">
                             <label for="exampleInputEmail1">Correo electrónico</label>
-                            <input type="email" class="form-control badge-pill border-success" id="txtEmail" aria-describedby="emailHelp" placeholder="Ingrese su email" />
+                            <input type="email" class="form-control badge-pill border-success" id="txtEmail" aria-describedby="emailHelp" placeholder="Ingrese su email" required />
                         </div>
                         <div class="form-group col-auto">
                             <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control badge-pill border-success" id="txtPass" placeholder="Contraseña" />
+                            <input type="password" class="form-control badge-pill border-success" id="txtPass" placeholder="Contraseña" required />
                         </div>
                         <div class="form-group col-auto">
-                            <button type="submit" class="btn badge-pill btn-outline-success">Iniciar sesión</button>
+                            <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="btn badge-pill btn-outline-success" OnClick="btnLogin_Click" />
                         </div>
                     </div>
                     <br />
