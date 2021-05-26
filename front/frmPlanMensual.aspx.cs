@@ -14,6 +14,11 @@ namespace HealthyDiet.front
         cQueys queys = new cQueys();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["idUser"] == null)
+            {
+                Response.Redirect("index.aspx");
+            }
+
             if (Request.Params["parametro"] != null)
             {
                 correo = Request.Params["parametro"];

@@ -16,7 +16,10 @@ namespace HealthyDiet.front
         public string idFood = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["idUser"] != null)
+            {
+                Response.Redirect("frmPrincipal.aspx");
+            }
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)

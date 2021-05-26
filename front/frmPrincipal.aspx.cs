@@ -12,6 +12,11 @@ namespace HealthyDiet.front
         string id;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["idUser"] == null)
+            {
+                Response.Redirect("index.aspx");
+            }
+
             if (Request.Params["parametro"] != null)
             {
                 id = Request.Params["parametro"];
@@ -26,6 +31,12 @@ namespace HealthyDiet.front
         protected void imgDieta_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("frmDieta.aspx?parametro=" + id);
+        }
+
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session["idUser"] = null;
+            Response.Redirect("frmLog.aspx");
         }
     }
 }

@@ -25,7 +25,7 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="nav navbar-nav">
                             <li class="nav-item active"><a class="nav-link" href="frmPrincipal.aspx">Inicio <span class="sr-only">(current)</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="frmLog.aspx">Cerrar sesión</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" onserverclick="btnCerrarSesion_Click">Cerrar sesión</a></li>
                         </ul>
                     </div>
                 </nav>

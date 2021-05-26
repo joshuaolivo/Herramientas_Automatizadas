@@ -18,6 +18,10 @@ namespace HealthyDiet.front
         int calorie = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["idUser"] == null)
+            {
+                Response.Redirect("index.aspx");
+            }
 
             if (Request.Params["parametro"] != null)
             {

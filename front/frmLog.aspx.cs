@@ -14,7 +14,10 @@ namespace HealthyDiet.front
         cHash hash = new cHash();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["idUser"] != null)
+            {
+                Response.Redirect("frmPrincipal.aspx");
+            }
         }
 
         protected void btnEnviar_Click(object sender, EventArgs e)
@@ -30,7 +33,7 @@ namespace HealthyDiet.front
             //    lblRespuesta.Visible = true;;
             //    lblRespuesta.Text = "Error, correo o contraseña incorrectos";
             //}
-
+            Session["idUser"] = "user404";
             Response.Redirect("frmPrincipal.aspx?parametro=465");
         }
     }
