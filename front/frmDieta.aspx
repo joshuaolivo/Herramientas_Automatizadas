@@ -128,7 +128,7 @@
                         </div>
                         <br />
                     </div>
-                    <div class="row justify-content-center m-1">
+                    <div class="row justify-content-center p-4">
                         <asp:Button ID="btnAdd" runat="server" Text="AGREGAR" CssClass="btn badge-pill btn-outline-success" OnClick="btnAdd_Click"/>
                     </div>
                     <div>
