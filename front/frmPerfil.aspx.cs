@@ -21,6 +21,8 @@ namespace HealthyDiet.front
             {
                 id = Session["idUser"].ToString();
             }
+
+
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)

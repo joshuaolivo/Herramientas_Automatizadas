@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthyDiet.clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,7 @@ namespace HealthyDiet.front
     public partial class frmPrincipal : System.Web.UI.Page
     {
         string id;
+        cQuerys queys = new cQuerys();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["idUser"] == null)
@@ -20,6 +22,11 @@ namespace HealthyDiet.front
             if (Session["idUser"] != null)
             {
                 id = Session["idUser"].ToString();
+            }
+
+            if(queys.ValidDiet(id))
+            {
+                imgDieta.Enabled = false;
             }
         }
 

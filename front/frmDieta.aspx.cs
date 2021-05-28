@@ -12,7 +12,7 @@ namespace HealthyDiet.front
     {
         string id;
         cCalories calories = new cCalories();
-        cQueys queys = new cQueys();
+        cQuerys queys = new cQuerys();
         float[] macros = new float[4];
         int[] cal = new int[3];
         int calorie = 0;

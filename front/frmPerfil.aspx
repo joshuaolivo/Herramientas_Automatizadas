@@ -102,9 +102,15 @@
                     </div>
                 </div>
                 <div class="col bg-white text-center rounded shadow p-3 m-1">
+<<<<<<< Updated upstream
                     <h3>Resumen de avance</h3>
+=======
+                    <h3>Resumen del avance</h3>
+>>>>>>> Stashed changes
                     <hr />
-                    <h5><span class="badge badge-secondary">Consumo basal: <asp:Label ID="lblCBasal" runat="server" Text="Label"></asp:Label></span></h5><br />
+                    <asp:GridView ID="gdvAvance" runat="server">
+                    </asp:GridView>
+                    <br />
                     <div class="row justify-content-center">
                         <div class="col col-3">
                             Calorias:

@@ -11,7 +11,7 @@ namespace HealthyDiet.front
     public partial class frmPlanMensual : System.Web.UI.Page
     {
         string id, correo;
-        cQueys queys = new cQueys();
+        cQuerys queys = new cQuerys();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["idUser"] == null)

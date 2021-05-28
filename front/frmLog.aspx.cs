@@ -10,7 +10,7 @@ namespace HealthyDiet.front
 {
     public partial class frmLog : System.Web.UI.Page
     {
-        cQueys queys = new cQueys();
+        cQuerys queys = new cQuerys();
         cHash hash = new cHash();
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -7,7 +7,7 @@ namespace HealthyDiet.clases
 {
     public class cCalories
     {
-        cQueys queys = new cQueys();
+        cQuerys queys = new cQuerys();
         public int[] getMacrosMore(string id)
         {
             int[] macros = new int[3];

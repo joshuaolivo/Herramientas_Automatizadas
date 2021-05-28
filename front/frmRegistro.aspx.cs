@@ -11,7 +11,7 @@ namespace HealthyDiet.front
 {
     public partial class frmRegistro : System.Web.UI.Page
     {
-        cQueys queys = new cQueys();
+        cQuerys queys = new cQuerys();
         cHash hash = new cHash();
         public string idFood = "";
         protected void Page_Load(object sender, EventArgs e)

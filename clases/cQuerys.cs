@@ -8,7 +8,7 @@ using System.Data;
 
 namespace HealthyDiet.clases
 {
-    public class cQueys
+    public class cQuerys
     {
         cConnection conet = new cConnection();
         bool resultado;
@@ -209,6 +209,35 @@ namespace HealthyDiet.clases
         }
 
         public DataTable FillInTable(string id)
+        {
+            SqlDataAdapter da2 = new SqlDataAdapter("sp_FillInTable", conet.conn);
+            da2.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da2.SelectCommand.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+            conet.Open();
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            return dt2;
+        }
+
+        public bool ValidDiet(string id)
+        {
+            SqlCommand cmd = new SqlCommand("sp_ValidDiet", conet.conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+            SqlDataReader Rleido;
+            conet.Open();
+            Rleido = cmd.ExecuteReader();
+
+            int Filas = Convert.ToInt32(Rleido.HasRows);
+
+            if (Rleido.Read())
+            {
+                resultado = Convert.ToBoolean(Rleido[0]);
+            }
+
+            return resultado;
+        }
+        public DataTable FillInProgres(string id)
         {
             SqlDataAdapter da2 = new SqlDataAdapter("sp_FillInTable", conet.conn);
             da2.SelectCommand.CommandType = CommandType.StoredProcedure;
