@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="col bg-white text-center rounded shadow p-3 m-1">
-                    <h3>Resumen del día</h3>
+                    <h3>Resumen de avance</h3>
                     <hr />
                     <h5><span class="badge badge-secondary">Consumo basal: <asp:Label ID="lblCBasal" runat="server" Text="Label"></asp:Label></span></h5><br />
                     <div class="row justify-content-center">

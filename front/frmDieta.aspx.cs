@@ -23,9 +23,9 @@ namespace HealthyDiet.front
                 Response.Redirect("index.aspx");
             }
 
-            if (Request.Params["parametro"] != null)
+            if (Session["idUser"] != null)
             {
-                id = Request.Params["parametro"];
+                id = Session["idUser"].ToString();
             }
 
             macros = queys.sumMacros(id);

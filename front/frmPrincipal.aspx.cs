@@ -17,20 +17,20 @@ namespace HealthyDiet.front
                 Response.Redirect("index.aspx");
             }
 
-            if (Request.Params["parametro"] != null)
+            if (Session["idUser"] != null)
             {
-                id = Request.Params["parametro"];
+                id = Session["idUser"].ToString();
             }
         }
 
         protected void imgInfo_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("frmPerfil.aspx?parametro=" + id);
+            Response.Redirect("frmPerfil.aspx");
         }
 
         protected void imgDieta_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("frmDieta.aspx?parametro=" + id);
+            Response.Redirect("frmDieta.aspx");
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)

@@ -33,8 +33,9 @@ namespace HealthyDiet.front
             //    lblRespuesta.Visible = true;;
             //    lblRespuesta.Text = "Error, correo o contraseña incorrectos";
             //}
-            Session["idUser"] = "user404";
-            Response.Redirect("frmPrincipal.aspx?parametro=465");
+            Session["idUser"] = queys.getId(txtCorreo.Value);
+
+            Response.Redirect("frmPrincipal.aspx");
         }
     }
 }
