@@ -168,9 +168,9 @@
             <script type="text/javascript">
                 $(document).ready(function () {
                     $(document).ready(function () {
-                        $('#cardFatSecret').fadeIn(1200);
-                        $('#cardInfoUser').fadeIn(2200);
-                        $('#cardDieta').fadeIn(3200);
+                        $('#cardFatSecret').fadeIn(300);
+                        $('#cardInfoUser').fadeIn(600);
+                        $('#cardDieta').fadeIn(900);
                     });
                 });
             </script>

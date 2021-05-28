@@ -189,8 +189,8 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $(document).ready(function () {
-                    $('#cardInfo').fadeIn(1200);
-                    $('#cardAvance').fadeIn(2200);
+                    $('#cardInfo').fadeIn(300);
+                    $('#cardAvance').fadeIn(600);
                 });
             });
         </script>

@@ -97,8 +97,8 @@
             <script type="text/javascript">
                 $(document).ready(function () {
                     $(document).ready(function () {
-                        $('#cardPlan').fadeIn(1200);
-                        $('#cardResumen').fadeIn(2200);
+                        $('#cardPlan').fadeIn(300);
+                        $('#cardResumen').fadeIn(600);
                     });
                 });
             </script>

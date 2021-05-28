@@ -55,7 +55,7 @@
                 <script type="text/javascript">
                     $(document).ready(function () {
                         $(document).ready(function () {
-                            $('#cardLog').fadeIn(1200);
+                            $('#cardLog').fadeIn(300);
                         });
                     });
                 </script>

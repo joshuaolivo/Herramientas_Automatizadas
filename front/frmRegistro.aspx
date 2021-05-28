@@ -89,7 +89,7 @@
                 <script type="text/javascript">
                     $(document).ready(function () {
                         $(document).ready(function () {
-                            $('#cardRegistro').fadeIn(1200);
+                            $('#cardRegistro').fadeIn(300);
                         });
                     });
                 </script>
