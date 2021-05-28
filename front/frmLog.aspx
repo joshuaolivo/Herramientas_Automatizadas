@@ -34,7 +34,7 @@
         </div>
         <div class="container bg-transparent p-3">
             <div class="row justify-content-md-center">
-                <div class="col-lg-6 text-center rounded shadow-lg bg-light p-1">
+                <div class="col-lg-6 text-center rounded shadow-lg bg-light p-1" id="cardLog" style="display:none;">
                     <img src="../images/Icon.png" class="img-fluid h-auto w-75" alt="HealthyDiet"/><br />
                     <asp:Label ID="lblEmpresa" runat="server" Text="Label" CssClass="h5">HealthyDiet</asp:Label><br />
                     <asp:Label ID="lblSesion" runat="server" Text="Label" CssClass="h3">Iniciar Sesion</asp:Label><br />
@@ -52,6 +52,13 @@
                     <asp:Button ID="btnEnviar" runat="server" Text="Iniciar Sesión" OnClick="btnEnviar_Click" CssClass="btn btn-success"></asp:Button><br /> 
                     <asp:Label ID="lblRespuesta" runat="server" Text="HealthyDiet" Visible="false" ></asp:Label>
                 </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $(document).ready(function () {
+                            $('#cardLog').fadeIn(1200);
+                        });
+                    });
+                </script>
             </div>
         </div>
         <asp:ScriptManager ID="smPageManager" ScriptMode="Release" runat="server">

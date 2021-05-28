@@ -34,7 +34,7 @@
         </div>
         <div class="container bg-transparent">
             <div class="row justify-content-md-center p-3">
-                <div class="col-lg-6 bg-white text-center rounded shadow">
+                <div class="col-lg-6 bg-white text-center rounded shadow" id="cardRegistro" style="display:none;">
                     <h1 class="align-self-center">CREAR CUENTA</h1>
                     <hr />
                     <div class="form-group">
@@ -59,23 +59,23 @@
                     </div>
                     <div class="form-group">
                         <label class="h6 w-75" for="inputEdad">Edad</label>
-                        <input class="form-control badge-pill w-100 border-success" type="number" id ="txtEdad" runat ="server" />
+                        <input class="form-control badge-pill w-100 border-success" type="number" id ="txtEdad" runat ="server" required />
                     </div>
                     <div class="form-group">
                         <label class="h6 w-75" for="inputCorreo">Correo electrónico</label>
-                        <input class="form-control badge-pill w-100 border-success" type ="email" id ="txtCorreo" runat ="server" />
+                        <input class="form-control badge-pill w-100 border-success" type ="email" id ="txtCorreo" runat ="server" required />
                     </div>
                     <div class="form-group">
                         <label class="h6 w-75" for="inputCorreoConfirm">Confirme su correo electrónico</label>
-                        <input class="form-control badge-pill w-100 border-success" type ="email" id ="txtCorreo2" runat ="server" />
+                        <input class="form-control badge-pill w-100 border-success" type ="email" id ="txtCorreo2" runat ="server" required />
                     </div>
                     <div class="form-group">
                         <label class="h6 w-75" for="inputPass">Contraseña</label>
-                        <input class="form-control badge-pill w-100 border-success" type="password" id ="txtContraseña" runat ="server" />
+                        <input class="form-control badge-pill w-100 border-success" type="password" id ="txtContraseña" runat ="server" required />
                     </div>
                     <div class="form-group">
                         <label class="h6 w-75" for="inputPassConfirm">Confirme su contraseña</label>
-                        <input class="form-control badge-pill w-100 border-success" type="password" id ="txtContraseña2" runat ="server" />
+                        <input class="form-control badge-pill w-100 border-success" type="password" id ="txtContraseña2" runat ="server" required />
                     </div>
                     <div class="form-group">
                         <div class="align-self-center w-100">
@@ -86,6 +86,13 @@
                         </div>
                     </div>
                 </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $(document).ready(function () {
+                            $('#cardRegistro').fadeIn(1200);
+                        });
+                    });
+                </script>
             </div>
         </div>
         <asp:ScriptManager ID="smPageManager" ScriptMode="Release" runat="server">

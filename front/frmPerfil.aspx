@@ -32,21 +32,9 @@
                 </nav>
             </header>
         </div>
-        <!--
-        <div class="nav bg-white m-0 p-0 justify-content-center">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item p-1">
-                    <a class="nav-link active btn-outline-success" id="pills-home-tab" data-toggle="pill" href="#pills-resumen" role="tab" aria-controls="pills-resumen" aria-selected="true">Resumen</a>
-                </li>
-                <li class="nav-item p-1">
-                    <a class="nav-link btn-outline-success" id="pills-profile-tab" data-toggle="pill" href="#pills-edicion" role="tab" aria-controls="pills-edicion" aria-selected="false">Editar información</a>
-                </li>
-            </ul>
-        </div>
-        -->
         <div class="container bg-transparent tab-content" id="pills-tabContent">
             <div class="row justify-content-md-center p-1 tab-pane fade show active h-75" id="pills-resumen" role="tabpanel" aria-labelledby="pills-resumen-tab">
-                <div class="col bg-white text-center rounded shadow p-3 m-1">
+                <div class="col bg-white text-center rounded shadow p-3 m-1" id="cardInfo" style="display:none;">
                     <h3>Tu información personal</h3>
                     <hr />
                     <div class="row p-1 justify-content-center">
@@ -101,7 +89,7 @@
                         Información registrada el: <asp:Label ID="lblFecha" runat="server" Text="Fecha"></asp:Label>
                     </div>
                 </div>
-                <div class="col bg-white text-center rounded shadow p-3 m-1">
+                <div class="col bg-white text-center rounded shadow p-3 m-1" id="cardAvance" style="display:none;">
 &nbsp;<h3>Resumen de avance</h3>
 &nbsp;<hr />
                     <asp:GridView ID="gdvAvance" runat="server">
@@ -198,6 +186,14 @@
             </div>
             -->
         </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(document).ready(function () {
+                    $('#cardInfo').fadeIn(1200);
+                    $('#cardAvance').fadeIn(2200);
+                });
+            });
+        </script>
         
         <asp:ScriptManager ID="smPageManager" ScriptMode="Release" runat="server">
             <Scripts>

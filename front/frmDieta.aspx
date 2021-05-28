@@ -35,7 +35,7 @@
         
         <div class="container-fluid bg-transparent">
             <div class="row justify-content-md-center p-1">
-                <div class="col-5 bg-white text-center rounded shadow p-3 m-1">
+                <div class="col-5 bg-white text-center rounded shadow p-3 m-1" id="cardFatSecret" style="display:none;">
                     <h4>AGREGAR ALIMENTO</h4>
                     <hr />
                     <div class ="row m-1">
@@ -62,7 +62,7 @@
                     </asp:GridView>
                     </div>
                 </div>
-                <div class="col-5 bg-white text-center rounded shadow p-3 m-1">
+                <div class="col-5 bg-white text-center rounded shadow p-3 m-1" id="cardInfoUser" style="display:none;">
                     <h3>RESUMEN DEL DIA</h3>
                     <hr />
                     <h5>CALORIAS A CONSUMIR</h5>
@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div class="row justify-content-md-center">
-                <div class="col-lg-10 bg-white text-center rounded shadow p-3">
+                <div class="col-lg-10 bg-white text-center rounded shadow p-3" id="cardDieta" style="display:none;">
                     <h2>MENU DEL DIA</h2>
                     <hr />
                     <div class="row justify-content-md-center">
@@ -165,6 +165,15 @@
                     </div>
                 </div>
             </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(document).ready(function () {
+                        $('#cardFatSecret').fadeIn(1200);
+                        $('#cardInfoUser').fadeIn(2200);
+                        $('#cardDieta').fadeIn(3200);
+                    });
+                });
+            </script>
         </div>
 
         <asp:ScriptManager ID="smPageManager" ScriptMode="Release" runat="server">

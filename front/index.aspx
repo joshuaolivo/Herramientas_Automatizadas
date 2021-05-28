@@ -97,9 +97,10 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-12 col-lg-4 h-100 align-items-center">
-                    <h1 class="display-3 text-center">Healthy Diet<hr />
-                        Nutrición al alcance de la mano</h1>
+                <div class="col-12 col-lg-4 h-100 align-items-center" id="cardMen" style="display:none">
+                    <h1 class="display-3 text-center">Healthy Diet</h1>
+                    <hr />
+                    <h1 class="display-3 text-center">Nutrición al alcance de la mano</h1>
                     <div class="align-items-center">
                         <div class="form-group col-auto">
                             <label for="exampleInputEmail1">Correo electrónico</label>
@@ -119,6 +120,13 @@
                         <asp:HyperLink ID="lblLinkLabel" runat="server" CssClass="btn btn-link w-100">Contáctanos</asp:HyperLink>
                     </div>
                 </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $(document).ready(function () {
+                            $('#cardMen').fadeIn(1200);
+                        });
+                    });
+                </script>
             </div>
         </div>
         
