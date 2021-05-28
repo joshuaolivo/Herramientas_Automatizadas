@@ -158,7 +158,7 @@
                         <asp:Button ID="btnAdd" runat="server" Text="AGREGAR" CssClass="btn badge-pill btn-outline-success" OnClick="btnAdd_Click"/>
                     </div>
                     <div>
-                        <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-sm" HeaderStyle-CssClass="table-active">
+                        <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-sm table-borderless rounded-lg" HeaderStyle-CssClass="table-active">
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>   
                     </div>

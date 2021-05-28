@@ -77,6 +77,7 @@ namespace HealthyDiet.front
             
             if(respuesta == 0)
             {
+                lblMedida.Text = "";
                 txtCal.Text = "";
                 txtCarbos.Text = "";
                 txtComida.Text = "";
