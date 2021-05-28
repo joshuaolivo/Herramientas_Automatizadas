@@ -12,6 +12,7 @@ namespace HealthyDiet.front
     {
         string id;
         cQuerys queys = new cQuerys();
+        bool ValidDiet;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["idUser"] == null)
@@ -23,10 +24,11 @@ namespace HealthyDiet.front
             {
                 id = Session["idUser"].ToString();
             }
+            ValidDiet = queys.ValidDiet(id);
 
-            if(queys.ValidDiet(id))
+            if (ValidDiet)
             {
-                imgDieta.Enabled = false;
+                lblDita.InnerText = "Es tiempo de crear tu dieta";
             }
         }
 
@@ -37,7 +39,15 @@ namespace HealthyDiet.front
 
         protected void imgDieta_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("frmDieta.aspx");
+            if (!ValidDiet)
+            {
+                Response.Redirect("frmDieta.aspx");
+            }
+            else
+            {
+                Response.Redirect("frmPlanMensual.aspx");
+            }
+            
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)

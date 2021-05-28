@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthyDiet.clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,8 @@ namespace HealthyDiet.front
     public partial class frmPerfil : System.Web.UI.Page
     {
         string id;
+        cQuerys querys = new cQuerys();
+        string[] info = new string[7];
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["idUser"] == null)
@@ -22,7 +25,15 @@ namespace HealthyDiet.front
                 id = Session["idUser"].ToString();
             }
 
+            info = querys.Self_Info(id);
 
+            lblNombre.Text = info[0];
+            lblApP.Text = info[1];
+            lblApM.Text = info[2];
+            lblEdad.Text = info[3];
+            lblAltura.Text = info[4];
+            lblPeso.Text = info[5];
+            lblFecha.Text = info[6];
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)

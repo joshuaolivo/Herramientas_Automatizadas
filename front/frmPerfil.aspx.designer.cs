@@ -96,15 +96,6 @@ namespace HealthyDiet.front
         protected global::System.Web.UI.WebControls.GridView gdvAvance;
 
         /// <summary>
-        /// Control lblCalorias.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCalorias;
-
-        /// <summary>
         /// Control txtNombreEdit.
         /// </summary>
         /// <remarks>

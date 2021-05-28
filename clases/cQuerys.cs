@@ -15,6 +15,7 @@ namespace HealthyDiet.clases
         string respuesta;
         int result;
         float[] macros = new float[4];
+        string[] info = new string[7];
 
         public bool Registrar(string id, string nombre, string ap_pat, string ap_mat, string sexo, string edad, string correo, string pass)
         {
@@ -36,7 +37,7 @@ namespace HealthyDiet.clases
 
             int Filas = Convert.ToInt32(Rleido.HasRows);
 
-            if(Rleido.Read())
+            if (Rleido.Read())
             {
                 resultado = Convert.ToBoolean(Rleido[0]);
             }
@@ -58,7 +59,7 @@ namespace HealthyDiet.clases
 
             if (Rleido.Read())
             {
-                resultado =  Convert.ToBoolean(Rleido[0]);
+                resultado = Convert.ToBoolean(Rleido[0]);
             }
             return resultado;
 
@@ -150,7 +151,7 @@ namespace HealthyDiet.clases
                 conet.Open();
                 cmd.ExecuteNonQuery();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return -1;
             }
@@ -196,7 +197,7 @@ namespace HealthyDiet.clases
             if (Rleido.Read())
             {
                 //CALORIAS
-                macros[0] = Convert.ToSingle(Math.Round(Convert.ToSingle(Rleido[0]),2));
+                macros[0] = Convert.ToSingle(Math.Round(Convert.ToSingle(Rleido[0]), 2));
                 //Carbos
                 macros[1] = Convert.ToSingle(Math.Round(Convert.ToSingle(Rleido[1]), 2));
                 //Grasas
@@ -246,6 +247,38 @@ namespace HealthyDiet.clases
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
             return dt2;
+        }
+
+        public String[] Self_Info(string id)
+        {
+            SqlCommand cmd = new SqlCommand("sp_Selfinfo", conet.conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+            SqlDataReader Rleido;
+            conet.Open();
+            Rleido = cmd.ExecuteReader();
+
+            int Filas = Convert.ToInt32(Rleido.HasRows);
+
+            if (Rleido.Read())
+            {
+                //Name
+                info[0] = Rleido[0].ToString();
+                //Frist Surname
+                info[1] = Rleido[1].ToString();
+                //Second
+                info[2] = Rleido[2].ToString();
+                //Age
+                info[3] = Rleido[3].ToString();
+                //Hiegth
+                info[4] = Rleido[4].ToString();
+                //weight
+                info[5] = Rleido[5].ToString();
+                //date 
+                info[6] = Rleido[6].ToString();
+            }
+
+            return info;
         }
     }
 }
