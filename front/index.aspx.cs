@@ -10,6 +10,7 @@ namespace HealthyDiet.front
 {
     public partial class index : System.Web.UI.Page
     {
+        cQuerys querys = new cQuerys();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["idUser"] != null)
@@ -20,18 +21,8 @@ namespace HealthyDiet.front
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            //string pass = hash.HashPass(txtContraseña.Value);
-
-            //if (queys.Login(txtCorreo.Value, pass))
-            //{
-            //    lblRespuesta.Text = "Usuario Encontrado";
-            //}
-            //else
-            //{
-            //    lblRespuesta.Visible = true;;
-            //    lblRespuesta.Text = "Error, correo o contraseña incorrectos";
-            //}
-            Session["idUser"] = "user404";
+          
+            Session["idUser"] = querys.getId(txtCorreo.Value);
             Response.Redirect("frmPrincipal.aspx?parametro=465");
         }
     }

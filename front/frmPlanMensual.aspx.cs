@@ -19,12 +19,10 @@ namespace HealthyDiet.front
                 Response.Redirect("index.aspx");
             }
 
-            if (Request.Params["parametro"] != null)
+            if (Session["idUser"] != null)
             {
-                correo = Request.Params["parametro"];
+                id = Session["idUser"].ToString();
             }
-
-            id = queys.getId(correo);
         }
 
         protected void btnPlan_Click(object sender, EventArgs e)

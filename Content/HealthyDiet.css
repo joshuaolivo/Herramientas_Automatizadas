@@ -1,4 +1,8 @@
-﻿.image-fondo-login {
+﻿.Cabeza{
+    text-align = center;
+}
+
+.image-fondo-login {
     background-image: url("../images/salad-1920.jpg");
     max-width: 100%;
     height: auto;

@@ -96,25 +96,23 @@
                         </a>
                       </div>
                     </div>
-                </div>
+                </div> 
                 <div class="col-12 col-lg-4 h-auto align-items-center">
-                    <br />
-                    <div class="form-row align-items-center">
+                      <h1 class="display-4">Healthy Diet</h1>             
+                      <h4 class="display-10">Nutrición al alcance de la mano</h4>
+                    <div class="align-items-center">
                         <div class="form-group col-auto">
                             <label for="exampleInputEmail1">Correo electrónico</label>
-                            <input type="email" class="form-control badge-pill border-success" id="txtEmail" aria-describedby="emailHelp" placeholder="Ingrese su email" required />
+                            <input type="email" class="form-control badge-pill border-success" id="txtCorreo" aria-describedby="emailHelp" placeholder="Ingrese su email" required runat ="server"/>
                         </div>
                         <div class="form-group col-auto">
                             <label for="exampleInputPassword1">Contraseña</label>
                             <input type="password" class="form-control badge-pill border-success" id="txtPass" placeholder="Contraseña" required />
                         </div>
                         <div class="form-group col-auto">
-                            <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="btn badge-pill btn-outline-success" OnClick="btnLogin_Click" />
+                            <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="btn badge-pill btn-outline-success w-100" OnClick="btnLogin_Click" />
                         </div>
                     </div>
-                    <br />
-                    <h1 class="display-4">Nutrición al alcance de la mano</h1>
-                    <br />
                     <div>
                         <a class="btn badge-pill btn-success w-100" href="frmRegistro.aspx">REGISTRARME</a>
                         <br />
