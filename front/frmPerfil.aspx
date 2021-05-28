@@ -102,21 +102,15 @@
                     </div>
                 </div>
                 <div class="col bg-white text-center rounded shadow p-3 m-1">
-<<<<<<< Updated upstream
-                    <h3>Resumen de avance</h3>
-=======
-                    <h3>Resumen del avance</h3>
->>>>>>> Stashed changes
-                    <hr />
+&nbsp;<h3>Resumen de avance</h3>
+&nbsp;<hr />
                     <asp:GridView ID="gdvAvance" runat="server">
                     </asp:GridView>
                     <br />
                     <div class="row justify-content-center">
                         <div class="col col-3">
-                            Calorias:
                         </div>
                         <div class="col col-4">
-                            <asp:Label ID="lblCalorias" runat="server" Text="Label"></asp:Label>
                         </div>
                     </div>
                     <div class="row justify-content-center">
