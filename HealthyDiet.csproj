@@ -49,6 +49,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Primitives.1.1.1\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
     </Reference>
@@ -97,6 +100,18 @@
     <Content Include="front\fatSecretAPI\blue.css" />
     <Content Include="front\fatSecretAPI\FatSecretAPI.js" />
     <Content Include="front\fatSecretAPI\final.js" />
+    <Content Include="front\fatSecretAPI\fs\fs.exe" />
+    <Content Include="front\fatSecretAPI\fs\libcrypto-1_1.dll" />
+    <Content Include="front\fatSecretAPI\fs\libffi-7.dll" />
+    <Content Include="front\fatSecretAPI\fs\libssl-1_1.dll" />
+    <Content Include="front\fatSecretAPI\fs\python38.dll" />
+    <Content Include="front\fatSecretAPI\fs\VCRUNTIME140.dll" />
+    <Content Include="front\fatSecretAPI\info\info.exe" />
+    <Content Include="front\fatSecretAPI\info\libcrypto-1_1.dll" />
+    <Content Include="front\fatSecretAPI\info\libffi-7.dll" />
+    <Content Include="front\fatSecretAPI\info\libssl-1_1.dll" />
+    <Content Include="front\fatSecretAPI\info\python38.dll" />
+    <Content Include="front\fatSecretAPI\info\VCRUNTIME140.dll" />
     <Content Include="front\frmDieta.aspx" />
     <Content Include="front\frmLog.aspx" />
     <Content Include="front\frmPerfil.aspx" />
@@ -117,6 +132,7 @@
     <Content Include="images\Icon.png" />
     <Content Include="images\inf-dieta-ico.png" />
     <Content Include="images\inf-personal-ico.png" />
+    <Content Include="images\powered_by_fatsecret.jpg" />
     <Content Include="images\salad-1920.jpg" />
     <Content Include="images\salmon-1920.jpg" />
     <Content Include="images\strawberries-1920.jpg" />
@@ -144,6 +160,40 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="BackUp Base de datos\healthyDiet 24-05-2021.bak" />
+    <Content Include="front\fatSecretAPI\fs\base_library.zip" />
+    <Content Include="front\fatSecretAPI\fs\fs.exe.manifest" />
+    <Content Include="front\fatSecretAPI\fs\pyexpat.pyd" />
+    <Content Include="front\fatSecretAPI\fs\select.pyd" />
+    <Content Include="front\fatSecretAPI\fs\unicodedata.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_asyncio.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_bz2.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_ctypes.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_decimal.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_hashlib.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_lzma.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_multiprocessing.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_overlapped.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_queue.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_socket.pyd" />
+    <Content Include="front\fatSecretAPI\fs\_ssl.pyd" />
+    <Content Include="front\fatSecretAPI\fs\certifi\cacert.pem" />
+    <Content Include="front\fatSecretAPI\info\base_library.zip" />
+    <Content Include="front\fatSecretAPI\info\info.exe.manifest" />
+    <Content Include="front\fatSecretAPI\info\pyexpat.pyd" />
+    <Content Include="front\fatSecretAPI\info\select.pyd" />
+    <Content Include="front\fatSecretAPI\info\unicodedata.pyd" />
+    <Content Include="front\fatSecretAPI\info\_asyncio.pyd" />
+    <Content Include="front\fatSecretAPI\info\_bz2.pyd" />
+    <Content Include="front\fatSecretAPI\info\_ctypes.pyd" />
+    <Content Include="front\fatSecretAPI\info\_decimal.pyd" />
+    <Content Include="front\fatSecretAPI\info\_hashlib.pyd" />
+    <Content Include="front\fatSecretAPI\info\_lzma.pyd" />
+    <Content Include="front\fatSecretAPI\info\_multiprocessing.pyd" />
+    <Content Include="front\fatSecretAPI\info\_overlapped.pyd" />
+    <Content Include="front\fatSecretAPI\info\_queue.pyd" />
+    <Content Include="front\fatSecretAPI\info\_socket.pyd" />
+    <Content Include="front\fatSecretAPI\info\_ssl.pyd" />
+    <Content Include="front\fatSecretAPI\info\certifi\cacert.pem" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

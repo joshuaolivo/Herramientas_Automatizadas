@@ -1,6 +1,11 @@
 ﻿using HealthyDiet.clases;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.Dynamic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,7 +15,7 @@ namespace HealthyDiet.front
 {
     public partial class frmDieta : System.Web.UI.Page
     {
-        string id;
+        string id, result, result_info;
         cCalories calories = new cCalories();
         cQuerys queys = new cQuerys();
         float[] macros = new float[4];
@@ -92,6 +97,104 @@ namespace HealthyDiet.front
                 GridView1.DataSource = queys.FillInTable(id);
                 GridView1.DataBind();
             }
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtAlimento.Text != "")
+            {
+                obtenerAlimento();
+            }
+        }
+
+        protected void gridAlimentos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gridAlimentos.PageIndex = e.NewPageIndex;
+            obtenerAlimento();
+        }
+
+        protected void gridAlimentos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "seleccion")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow id_Rows = gridAlimentos.Rows[index];
+                string idalimento = id_Rows.Cells[1].Text;
+                obtenerInfo(int.Parse(idalimento));
+            }
+        }
+
+
+        private void obtenerAlimento()
+        {
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.FileName = AppDomain.CurrentDomain.BaseDirectory + @"front\fatSecretAPI\fs\fs.exe";
+            start.Arguments = string.Format("{0}", txtAlimento.Text);
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;
+            start.CreateNoWindow = true;
+            using (Process process = Process.Start(start))
+            {
+                using (StreamReader reader = process.StandardOutput)
+                {
+                    result = reader.ReadToEnd();
+                }
+            }
+            var dataTable = JsonConvert.DeserializeObject<List<JsonResult>>(result);
+            gridAlimentos.DataSource = dataTable;
+            gridAlimentos.DataBind();
+        }
+
+        private void obtenerInfo(int idF)
+        {
+            ProcessStartInfo start = new ProcessStartInfo();
+            //start.FileName = @"F:\elagu\Documentos\Visual Studio 2019\Proyectos\HealthyDietAPIPython\info\info.exe";
+            start.FileName = AppDomain.CurrentDomain.BaseDirectory + @"front\fatSecretAPI\info\info.exe";
+            start.Arguments = string.Format("{0}", idF);
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;
+            start.CreateNoWindow = true;
+            using (Process process = Process.Start(start))
+            {
+                using (StreamReader reader = process.StandardOutput)
+                {
+                    result_info = reader.ReadToEnd();
+                    result_info = "[" + result_info + "]";
+                    var listProductos = JsonConvert.DeserializeObject<List<ExpandoObject>>(result_info);
+                    foreach (dynamic prod in listProductos)
+                    {
+                        if (result_info.Contains("brand_name"))
+                        {
+                            string porcion = prod.servings.serving.metric_serving_amount + prod.servings.serving.metric_serving_unit;
+                            lblMedida.Text = porcion;
+                            var IDFood = prod.food_id;
+                            txtComida.Text = prod.food_name;
+                            txtProte.Text = prod.servings.serving.protein;
+                            txtCal.Text = prod.servings.serving.calories;
+                            txtCarbos.Text = prod.servings.serving.carbohydrate;
+                            txtGrasas.Text = prod.servings.serving.fat;
+                        }
+                        else
+                        {
+                            string porcion = prod.servings.serving[0].metric_serving_amount + prod.servings.serving[0].metric_serving_unit;
+                            lblMedida.Text = porcion;
+                            var IDFood = prod.food_id;
+                            txtComida.Text = prod.food_name;
+                            txtProte.Text = prod.servings.serving[0].protein;
+                            txtCal.Text = prod.servings.serving[0].calories;
+                            txtCarbos.Text = prod.servings.serving[0].carbohydrate;
+                            txtGrasas.Text = prod.servings.serving[0].fat;
+                        }
+                    }
+                }
+            }
+        }
+
+        public class JsonResult
+        {
+            public int food_id { get; set; }
+            public string food_name { get; set; }
+            public string food_description { get; set; }
         }
     }
 }

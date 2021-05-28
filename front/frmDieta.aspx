@@ -37,7 +37,29 @@
                 <div class="col-5 bg-white text-center rounded shadow p-3 m-1">
                     <h4>AGREGAR ALIMENTO</h4>
                     <hr />
-                    <iframe src="fatSecretAPI/API.aspx" class="w-100 h-75"></iframe>
+                    <div class ="row m-1">
+                        <div class="col col-8">
+                            <asp:TextBox ID="txtAlimento" runat="server" CssClass="form-control border-dark bg-white btn-outline-dark text-black-50 form-control-sm badge-pill"></asp:TextBox>
+                        </div>
+                        <div class="col col-4">
+                            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" CssClass="btn btn-dark badge-pill w-100" /><br />
+                        </div>
+                    </div>
+                    <div class="bg-success text-white">
+                        <div class="col p-1">
+                            <image src="../images/powered_by_fatsecret.jpg" style="height:20px; width:auto;" />
+                        </div>
+                    </div>
+                    <div>
+                        <asp:GridView ID="gridAlimentos" runat="server" CssClass="table table-hover table-borderless table-sm rounded-lg Small shadow" PageSize="3" AllowPaging="True" GridLines="Horizontal" ShowHeader="False" BorderColor="White" BorderStyle="None" OnPageIndexChanging="gridAlimentos_PageIndexChanging" OnRowCommand="gridAlimentos_RowCommand">
+                        <Columns>
+                            <asp:ButtonField ButtonType="Button" Text="Seleccionar alimento" ControlStyle-CssClass="btn badge-pill btn-outline-success" CommandName="seleccion">
+<ControlStyle CssClass="btn badge-pill btn-outline-success"></ControlStyle>
+                            </asp:ButtonField>
+                        </Columns>
+                        <PagerStyle CssClass="Page navigation example" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    </asp:GridView>
+                    </div>
                 </div>
                 <div class="col-5 bg-white text-center rounded shadow p-3 m-1">
                     <h3>RESUMEN DEL DIA</h3>
@@ -106,6 +128,10 @@
                     <h2>MENU DEL DIA</h2>
                     <hr />
                     <div class="row justify-content-md-center">
+                        <div class="col-md-auto">
+                            Por cada<br />
+                            <asp:Label ID="lblMedida" runat="server" Text=""></asp:Label>
+                        </div>
                         <div class="col-md-auto">
                             Comida<br />
                             <asp:TextBox ID="txtComida" runat="server" CssClass="form-control border-dark bg-white btn-outline-dark text-black-50 form-control-sm badge-pill"></asp:TextBox>
