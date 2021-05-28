@@ -98,8 +98,8 @@
                     </div>
                 </div> 
                 <div class="col-12 col-lg-4 h-auto align-items-center">
-                      <h1 class="display-4">Healthy Diet</h1>             
-                      <h4 class="display-10">Nutrición al alcance de la mano</h4>
+                    <h1 class="display-3 text-center">Healthy Diet<hr />
+                        Nutrición al alcance de la mano</h1>
                     <div class="align-items-center">
                         <div class="form-group col-auto">
                             <label for="exampleInputEmail1">Correo electrónico</label>
@@ -120,67 +120,6 @@
                     </div>
                 </div>
             </div>
-            <!--Formulario de registro-->
-            <div class="modal fade bd-example-modal-lg" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistro" aria-hidden="true" aria-describedby="a">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title text" id="exampleModalLabel">CREA TU CUENTA</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <form>
-                                <div class="form-group row">
-                                    <div class="col-md-4">
-                                        <label for="staticName" class="col-md-2 col-form-label">Nombre(s)</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <asp:TextBox ID="TextBox1" runat="server" class="form-control badge-pill w-75 border-success"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-4">
-                                        <label for="staticAPP" class="col-md-2 col-form-label">Apellido paterno</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <asp:TextBox ID="TextBox2" runat="server" class="form-control badge-pill w-75 border-success"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-4">
-                                        <label for="staticAPM" class="col-md-2 col-form-label">Apellido materno</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <asp:TextBox ID="TextBox3" runat="server" class="form-control badge-pill w-75 border-success"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-4">
-                                        <label for="staticAPM" class="col-md-2 col-form-label">Correo electrónico</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <asp:TextBox ID="TextBox4" runat="server" class="form-control badge-pill w-75 border-success"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-4">
-                                        <label for="inputPassword" class="col-md-2 col-form-label">Contraseña</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <asp:TextBox ID="TextBox5" runat="server" class="form-control badge-pill w-75 border-success"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer align-self-center">
-                            <button type="button" data-toggle="modal" data-target="#modalRegistro" class="btn badge-pill btn-success" runat="server" id="btnInicio">REGISTRARME</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Formulario de registro-->
         </div>
         
         <asp:ScriptManager ID="smPageManager" ScriptMode="Release" runat="server">
