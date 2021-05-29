@@ -33,7 +33,7 @@
         </div>
         <div class="container bg-transparent">
             <div class="row justify-content-md-center p-3">
-                <div class="col-lg-6 bg-white text-center rounded shadow" id="cardPlan" style="display:none;">
+                <div class="col-lg-6 bg-white text-center rounded shadow p-3" id="cardPlan" style="display:none;">
                     <asp:Label ID="Label1" runat="server" Text="Plan mensual" CssClass="h1"></asp:Label>
                     <hr />
                     <div class="form-group">
