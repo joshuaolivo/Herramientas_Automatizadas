@@ -34,6 +34,10 @@ namespace HealthyDiet.front
             lblAltura.Text = info[4];
             lblPeso.Text = info[5];
             lblFecha.Text = info[6];
+
+            gdvAvance.DataSource = querys.FillInProgres(id);
+            gdvAvance.DataBind();
+
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)

@@ -10,7 +10,7 @@ namespace HealthyDiet.front
 {
     public partial class frmPlanMensual : System.Web.UI.Page
     {
-        string id, correo;
+        string id;
         cQuerys queys = new cQuerys();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,6 +22,14 @@ namespace HealthyDiet.front
             if (Session["idUser"] != null)
             {
                 id = Session["idUser"].ToString();
+            }
+
+            int time = queys.time_diet(id);
+            if(time>0)
+            {
+                Label2.Text = "Mes de dieta No.";
+                txtMeses.Text = (time+1).ToString();
+                txtMeses.Enabled = false;
             }
         }
 
@@ -40,20 +48,14 @@ namespace HealthyDiet.front
 
             //RAUL AQUI QUIERO QUE SALGA UN MENSA QUE DIGA PLAN CREADO Y GURDADO CON EXITO
             resultado = queys.saveDiet(id, Convert.ToInt32(txtMeses.Text), lblObjetivo.Text, calorias);
-
-            if (btnPlan.Text == "Crear Plan")
-            {
-                btnPlan.Text = "Editar";
-            }
-            else
-            {
-                btnPlan.Text = "Guardar";
-            }
+            resultado = queys.setDataFIsic(id, Convert.ToInt32(txtAltura.Text), Convert.ToSingle(txtPeso.Text));
+            btnPlan.Enabled = false;
+           
         }
 
         protected void btnContinuar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("frmDieta.aspx?parametro=" + id);
+            Response.Redirect("frmDieta.aspx");
         }
 
         private string purpose()

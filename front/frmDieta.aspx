@@ -48,7 +48,8 @@
                     </div>
                     <div class="bg-success text-white">
                         <div class="col p-1">
-                            <image src="../images/powered_by_fatsecret.jpg" style="height:20px; width:auto;" />
+                            <!--Aqui le movi-->
+                            <img src="../images/powered_by_fatsecret.jpg" style="height:20px; width:auto;" />
                         </div>
                     </div>
                     <div>
