@@ -22,19 +22,8 @@ namespace HealthyDiet.front
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-            //string pass = hash.HashPass(txtContraseña.Value);
-
-            //if (queys.Login(txtCorreo.Value, pass))
-            //{
-            //    lblRespuesta.Text = "Usuario Encontrado";
-            //}
-            //else
-            //{
-            //    lblRespuesta.Visible = true;;
-            //    lblRespuesta.Text = "Error, correo o contraseña incorrectos";
-            //}
+            
             Session["idUser"] = queys.getId(txtCorreo.Value);
-
             Response.Redirect("frmPrincipal.aspx");
         }
     }

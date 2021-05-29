@@ -92,7 +92,7 @@
                 <div class="col bg-white text-center rounded shadow p-3 m-1" id="cardAvance" style="display:none;">
 &nbsp;<h3>Resumen de avance</h3>
 &nbsp;<hr />
-                    <asp:GridView ID="gdvAvance" runat="server">
+                    <asp:GridView ID="gdvAvance" runat="server" CssClass="table table-hover table-sm table-borderless rounded-lg" HeaderStyle-CssClass="table-active">
                     </asp:GridView>
                     <br />
                     <div class="row justify-content-center">

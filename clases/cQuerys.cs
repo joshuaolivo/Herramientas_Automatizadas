@@ -151,7 +151,7 @@ namespace HealthyDiet.clases
                 conet.Open();
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }
@@ -175,7 +175,7 @@ namespace HealthyDiet.clases
                 conet.Open();
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }
@@ -240,7 +240,7 @@ namespace HealthyDiet.clases
         }
         public DataTable FillInProgres(string id)
         {
-            SqlDataAdapter da2 = new SqlDataAdapter("sp_FillInTable", conet.conn);
+            SqlDataAdapter da2 = new SqlDataAdapter("sp_FillInProgres", conet.conn);
             da2.SelectCommand.CommandType = CommandType.StoredProcedure;
             da2.SelectCommand.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
             conet.Open();
@@ -279,6 +279,45 @@ namespace HealthyDiet.clases
             }
 
             return info;
+        }
+
+        public int setDataFIsic(string id, int estatura, float peso)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("sp_setFD", conet.conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+                cmd.Parameters.Add("@estutaura", SqlDbType.Int).Value = estatura;
+                cmd.Parameters.Add("@peso", SqlDbType.Float).Value = peso;
+                cmd.ExecuteNonQuery();
+                conet.Open();
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+
+            return 0;
+        }
+
+        public int time_diet(string id)
+        {
+            SqlCommand cmd = new SqlCommand("sp_TimeDiet", conet.conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+            SqlDataReader Rleido;
+            conet.Open();
+            Rleido = cmd.ExecuteReader();
+
+            int Filas = Convert.ToInt32(Rleido.HasRows);
+
+            if (Rleido.Read())
+            {
+                result = Convert.ToInt32(Rleido[0]);
+            }
+
+            return result;
         }
     }
 }
