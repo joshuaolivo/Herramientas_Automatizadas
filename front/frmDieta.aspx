@@ -34,8 +34,8 @@
         </div>
         
         <div class="container-fluid bg-transparent">
-            <div class="row justify-content-md-center p-1">
-                <div class="col-5 bg-white text-center rounded shadow p-3 m-1" id="cardFatSecret" style="display:none;" runat="server">
+            <div class="row justify-content-md-center text-center m-2">
+                <div class="col-12 col-lg-5 bg-white justify-content-md-center text-center rounded shadow p-3 m-1" id="cardFatSecret" style="display:none;" runat="server">
                     <h4>AGREGAR ALIMENTO</h4>
                     <hr />
                     <div class ="row m-1">
@@ -63,7 +63,7 @@
                     </asp:GridView>
                     </div>
                 </div>
-                <div class="col-5 bg-white text-center rounded shadow p-3 m-1" id="cardInfoUser" style="display:none;" runat="server">
+                <div class="col-12 col-lg-5 bg-white justify-content-md-center text-center rounded shadow p-3 m-1" id="cardInfoUser" style="display:none;" runat="server">
                     <h3>RESUMEN DEL DIA</h3>
                     <hr />
                     <h5>CALORIAS A CONSUMIR</h5>
@@ -125,8 +125,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-md-center">
-                <div class="col-lg-10 bg-white text-center rounded shadow p-3" id="cardDieta" style="display:none;" runat="server">
+            <div class="row justify-content-md-center m-2">
+                <div class="col-12 col-lg-10 bg-white text-center rounded shadow p-3 m-1" id="cardDieta" style="display:none;" runat="server">
                     <h2>MENU DEL DIA</h2>
                     <hr />
                     <div class="row justify-content-md-center">
