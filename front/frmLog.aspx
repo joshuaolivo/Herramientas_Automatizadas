@@ -39,6 +39,7 @@
                     <asp:Label ID="lblEmpresa" runat="server" Text="Label" CssClass="h5">HealthyDiet</asp:Label><br />
                     <asp:Label ID="lblSesion" runat="server" Text="Label" CssClass="h3">Iniciar Sesion</asp:Label><br />
                     <hr />
+                    <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
                     <div class="m-4">
                         <div class="form-group">
                             <asp:Label ID="lblCorreo" runat="server" > Correo</asp:Label>
@@ -50,7 +51,6 @@
                         </div>
                     </div>
                     <asp:Button ID="btnEnviar" runat="server" Text="Iniciar Sesión" OnClick="btnEnviar_Click" CssClass="btn btn-success"></asp:Button><br /> 
-                    <asp:Label ID="lblRespuesta" runat="server" Text="" Visible="false" ></asp:Label>
                 </div>
                 <script type="text/javascript">
                     function cargarAnim() {

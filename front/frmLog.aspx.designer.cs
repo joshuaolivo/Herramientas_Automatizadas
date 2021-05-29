@@ -51,6 +51,15 @@ namespace HealthyDiet.front
         protected global::System.Web.UI.WebControls.Label lblSesion;
 
         /// <summary>
+        /// Control lblRespuesta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRespuesta;
+
+        /// <summary>
         /// Control lblCorreo.
         /// </summary>
         /// <remarks>
@@ -94,15 +103,6 @@ namespace HealthyDiet.front
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEnviar;
-
-        /// <summary>
-        /// Control lblRespuesta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRespuesta;
 
         /// <summary>
         /// Control smPageManager.

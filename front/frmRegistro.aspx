@@ -35,6 +35,7 @@
         <div class="container bg-transparent">
             <div class="row justify-content-md-center">
                 <div class="col-lg-6 bg-white text-center rounded shadow" id="cardRegistro" style="display:none;" runat="server">
+                    <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
                     <h1 class="align-self-center">CREAR CUENTA</h1>
                     <hr />
                     <div class="form-group">
@@ -80,9 +81,6 @@
                     <div class="form-group">
                         <div class="align-self-center w-100">
                             <asp:Button CssClass="btn badge-pill btn-success w-25" OnClick="btnRegistrar_Click" ID="btnRegistrar" runat="server" Text="Registrar" />
-                        </div>
-                        <div>
-                            <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
                         </div>
                     </div>
                 </div>

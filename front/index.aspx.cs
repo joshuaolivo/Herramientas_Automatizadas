@@ -33,7 +33,7 @@ namespace HealthyDiet.front
         {
             try
             {
-                string inputPass = hash.HashPass(txtPass.Value);
+                string inputPass = hash.HashPass(txtContraseña.Value);
                 bool result = querys.Login(txtCorreo.Value, inputPass);
                 if (result)
                 {
@@ -50,8 +50,6 @@ namespace HealthyDiet.front
             {
 
             }
-            Session["idUser"] = querys.getId(txtCorreo.Value);
-            Response.Redirect("frmPrincipal.aspx?parametro=465");
         }
     }
 }

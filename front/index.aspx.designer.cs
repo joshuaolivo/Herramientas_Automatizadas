@@ -33,33 +33,6 @@ namespace HealthyDiet.front
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl cardMen;
 
         /// <summary>
-        /// Control txtCorreo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtCorreo;
-
-        /// <summary>
-        /// Control txtPass.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPass;
-
-        /// <summary>
-        /// Control btnLogin.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
-
-        /// <summary>
         /// Control lblRespuesta.
         /// </summary>
         /// <remarks>
@@ -69,13 +42,31 @@ namespace HealthyDiet.front
         protected global::System.Web.UI.WebControls.Label lblRespuesta;
 
         /// <summary>
-        /// Control lblLinkLabel.
+        /// Control txtCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lblLinkLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtCorreo;
+
+        /// <summary>
+        /// Control txtContraseña.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtContraseña;
+
+        /// <summary>
+        /// Control btnLogin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
         /// Control smPageManager.

@@ -97,30 +97,26 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-12 col-lg-4 h-100 align-items-center" id="cardMen" style="display:none" runat="server">
+                <div class="col-12 col-lg-4 h-100 align-items-center text-center" id="cardMen" style="display:none" runat="server">
                     <h1 class="display-3 text-center">Healthy Diet</h1>
                     <hr />
                     <h1 class="display-3 text-center">Nutrición al alcance de la mano</h1>
-                    <div class="align-items-center">
+                    <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
+                    <div class="align-items-center text-left">
                         <div class="form-group col-auto">
                             <label for="exampleInputEmail1">Correo electrónico</label>
                             <input type="email" class="form-control badge-pill border-success" id="txtCorreo" aria-describedby="emailHelp" placeholder="Ingrese su email" required runat ="server"/>
                         </div>
                         <div class="form-group col-auto">
                             <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control badge-pill border-success" id="txtPass" placeholder="Contraseña" runat="server" required />
+                            <input class="form-control badge-pill border-success" type ="password" runat="server" id="txtContraseña" placeholder="Ingrese su contraseña" required/>
                         </div>
                         <div class="form-group col-auto">
                             <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="btn badge-pill btn-outline-success w-100" OnClick="btnLogin_Click" />
                         </div>
-                        <div>
-                            <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
-                        </div>
                     </div>
                     <div>
                         <a class="btn badge-pill btn-success w-100" href="frmRegistro.aspx">REGISTRARME</a>
-                        <br />
-                        <asp:HyperLink ID="lblLinkLabel" runat="server" CssClass="btn btn-link w-100">Contáctanos</asp:HyperLink>
                     </div>
                 </div>
                 <script type="text/javascript">
