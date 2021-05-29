@@ -33,7 +33,7 @@
             </header>
         </div>
         <div class="container bg-transparent">
-            <div class="row justify-content-md-center p-3">
+            <div class="row justify-content-md-center">
                 <div class="col-lg-6 bg-white text-center rounded shadow" id="cardRegistro" style="display:none;">
                     <h1 class="align-self-center">CREAR CUENTA</h1>
                     <hr />
