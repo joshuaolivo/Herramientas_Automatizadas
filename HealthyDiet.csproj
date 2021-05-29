@@ -195,6 +195,7 @@
     <Content Include="front\fatSecretAPI\info\_socket.pyd" />
     <Content Include="front\fatSecretAPI\info\_ssl.pyd" />
     <Content Include="front\fatSecretAPI\info\certifi\cacert.pem" />
+    <Content Include="BackUp Base de datos\healthyDiet 28-05-2021 %282%29.bak" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
