@@ -34,7 +34,7 @@
         </div>
         <div class="container bg-transparent">
             <div class="row justify-content-md-center">
-                <div class="col-lg-6 bg-white text-center rounded shadow" id="cardRegistro" style="display:none;">
+                <div class="col-lg-6 bg-white text-center rounded shadow" id="cardRegistro" style="display:none;" runat="server">
                     <h1 class="align-self-center">CREAR CUENTA</h1>
                     <hr />
                     <div class="form-group">
@@ -87,11 +87,13 @@
                     </div>
                 </div>
                 <script type="text/javascript">
-                    $(document).ready(function () {
+                    function cargarAnim() {
                         $(document).ready(function () {
-                            $('#cardRegistro').fadeIn(300);
+                            $(document).ready(function () {
+                                $('#cardRegistro').fadeIn(300);
+                            });
                         });
-                    });
+                    }
                 </script>
             </div>
         </div>

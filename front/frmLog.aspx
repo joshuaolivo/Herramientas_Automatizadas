@@ -34,7 +34,7 @@
         </div>
         <div class="container bg-transparent p-3">
             <div class="row justify-content-md-center">
-                <div class="col-lg-6 text-center rounded shadow-lg bg-light p-1" id="cardLog" style="display:none;">
+                <div class="col-lg-6 text-center rounded shadow-lg bg-light p-1" id="cardLog" style="display:none;" runat="server">
                     <img src="../images/Icon.png" class="img-fluid h-auto w-75" alt="HealthyDiet"/><br />
                     <asp:Label ID="lblEmpresa" runat="server" Text="Label" CssClass="h5">HealthyDiet</asp:Label><br />
                     <asp:Label ID="lblSesion" runat="server" Text="Label" CssClass="h3">Iniciar Sesion</asp:Label><br />
@@ -45,19 +45,21 @@
                             <input class="form-control badge-pill border-success" type="email" runat="server" ID="txtCorreo" required/>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="lblContraseña" runat="server" type="">Contaraseña</asp:Label>
+                            <asp:Label ID="lblContraseña" runat="server" type="">Contraseña</asp:Label>
                             <input class="form-control badge-pill border-success" type ="password" runat="server" id="txtContraseña" required/>
                         </div>
                     </div>
                     <asp:Button ID="btnEnviar" runat="server" Text="Iniciar Sesión" OnClick="btnEnviar_Click" CssClass="btn btn-success"></asp:Button><br /> 
-                    <asp:Label ID="lblRespuesta" runat="server" Text="HealthyDiet" Visible="false" ></asp:Label>
+                    <asp:Label ID="lblRespuesta" runat="server" Text="" Visible="false" ></asp:Label>
                 </div>
                 <script type="text/javascript">
-                    $(document).ready(function () {
+                    function cargarAnim() {
                         $(document).ready(function () {
-                            $('#cardLog').fadeIn(500);
+                            $(document).ready(function () {
+                                $('#cardLog').fadeIn(500);
+                            });
                         });
-                    });
+                    }
                 </script>
             </div>
         </div>

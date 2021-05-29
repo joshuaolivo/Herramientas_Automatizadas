@@ -39,11 +39,11 @@
             <div class="row justify-content-center">
                 <div class="col-4 bg-white text-center rounded shadow p-3 m-1" id="cardPersonal" style="display:none;">
                     <h5>Información personal</h5>
-                    <asp:ImageButton ID="imgInfo" runat="server" ImageUrl="~/images/inf-personal-ico.png" CssClass="img-fluid" OnClick="imgInfo_Click" />
+                    <asp:ImageButton ID="imgInfo" runat="server" ImageUrl="~/images/inf-personal-ico.png" CssClass="img-fluid zoomIt" OnClick="imgInfo_Click" />
                 </div>
                 <div class="col-4 bg-white text-center rounded shadow p-3 m-1" id="cardDieta" style="display:none;">
                     <h5 id="lblDita" runat="server">Mi dieta</h5>
-                    <asp:ImageButton ID="imgDieta" runat="server" ImageUrl="~/images/inf-dieta-ico.png" CssClass="img-fluid" OnClick="imgDieta_Click" />
+                    <asp:ImageButton ID="imgDieta" runat="server" ImageUrl="~/images/inf-dieta-ico.png" CssClass="img-fluid zoomIt" OnClick="imgDieta_Click" />
                 </div>
             </div>
             <script type="text/javascript">

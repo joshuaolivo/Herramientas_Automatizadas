@@ -49,3 +49,20 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.zoomIt {
+    display: block !important;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    -moz-transition: -moz-transform 1s ease-out;
+    -o-transition: -o-transform 1s ease-out;
+    -ms-transition: -ms-transform 1s ease-out;
+    transition: transform 1s ease-out;
+}
+
+.zoomIt:hover {
+    -moz-transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -o-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9)
+}

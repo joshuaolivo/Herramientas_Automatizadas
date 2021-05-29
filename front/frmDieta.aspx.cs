@@ -23,13 +23,23 @@ namespace HealthyDiet.front
         int calorie = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
+            }
+            else
+            {
+                cardDieta.Style.Remove("display");
+                cardFatSecret.Style.Remove("display");
+                cardInfoUser.Style.Remove("display");
+            }
+
             if (Session["idUser"] == null)
             {
                 Response.Redirect("index.aspx");
             }
-
-            if (Session["idUser"] != null)
-            {
+            else
+            { 
                 id = Session["idUser"].ToString();
             }
 
@@ -64,11 +74,7 @@ namespace HealthyDiet.front
             GridView1.DataSource = queys.FillInTable(id);
             GridView1.DataBind();
         }
-
-        protected void GridView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Session["idUser"] = null;
@@ -82,26 +88,7 @@ namespace HealthyDiet.front
             
             if(respuesta == 0)
             {
-                lblMedida.Text = "";
-                txtCal.Text = "";
-                txtCarbos.Text = "";
-                txtComida.Text = "";
-                txtGrasas.Text = "";
-                txtProte.Text = "";
-                macros = queys.sumMacros(id);
-
-                lblCaloriasC.Text = Convert.ToString(macros[0]);
-                lblCarboC.Text = Convert.ToString(macros[1]);
-                lblGrasasC.Text = Convert.ToString(macros[2]);
-                lblProteinaC.Text = Convert.ToString(macros[3]);
-
-                lblCaloriasF.Text = Convert.ToString(calorie - macros[0]);
-                lblCarboF.Text = Convert.ToString(cal[0] - macros[1]);
-                lblProteinaF.Text = Convert.ToString(cal[1] - macros[2]);
-                lblGrasasF.Text = Convert.ToString(cal[2] - macros[3]);
-
-                GridView1.DataSource = queys.FillInTable(id);
-                GridView1.DataBind();
+                addAlimento();
             }
         }
 
@@ -196,6 +183,30 @@ namespace HealthyDiet.front
             }
         }
 
+        private void addAlimento()
+        {
+            lblMedida.Text = "";
+            txtCal.Text = "";
+            txtCarbos.Text = "";
+            txtComida.Text = "";
+            txtGrasas.Text = "";
+            txtProte.Text = "";
+            macros = queys.sumMacros(id);
+
+            lblCaloriasC.Text = Convert.ToString(macros[0]);
+            lblCarboC.Text = Convert.ToString(macros[1]);
+            lblGrasasC.Text = Convert.ToString(macros[2]);
+            lblProteinaC.Text = Convert.ToString(macros[3]);
+
+            lblCaloriasF.Text = Convert.ToString(calorie - macros[0]);
+            lblCarboF.Text = Convert.ToString(cal[0] - macros[1]);
+            lblProteinaF.Text = Convert.ToString(cal[1] - macros[2]);
+            lblGrasasF.Text = Convert.ToString(cal[2] - macros[3]);
+
+            GridView1.DataSource = queys.FillInTable(id);
+            GridView1.DataBind();
+        }
+        
         public class JsonResult
         {
             public int food_id { get; set; }

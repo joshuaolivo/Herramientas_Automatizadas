@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-12 col-lg-4 h-100 align-items-center" id="cardMen" style="display:none">
+                <div class="col-12 col-lg-4 h-100 align-items-center" id="cardMen" style="display:none" runat="server">
                     <h1 class="display-3 text-center">Healthy Diet</h1>
                     <hr />
                     <h1 class="display-3 text-center">Nutrición al alcance de la mano</h1>
@@ -108,10 +108,13 @@
                         </div>
                         <div class="form-group col-auto">
                             <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control badge-pill border-success" id="txtPass" placeholder="Contraseña" required />
+                            <input type="password" class="form-control badge-pill border-success" id="txtPass" placeholder="Contraseña" runat="server" required />
                         </div>
                         <div class="form-group col-auto">
                             <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="btn badge-pill btn-outline-success w-100" OnClick="btnLogin_Click" />
+                        </div>
+                        <div>
+                            <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
                         </div>
                     </div>
                     <div>
@@ -121,11 +124,13 @@
                     </div>
                 </div>
                 <script type="text/javascript">
-                    $(document).ready(function () {
+                    function cargarAnim() {
                         $(document).ready(function () {
-                            $('#cardMen').fadeIn(1200);
+                            $(document).ready(function () {
+                                $('#cardMen').fadeIn(1200);
+                            });
                         });
-                    });
+                    }
                 </script>
             </div>
         </div>

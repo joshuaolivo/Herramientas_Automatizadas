@@ -50,7 +50,7 @@ namespace HealthyDiet.clases
         public string HashPass(string pass)
          {   
             string result = string.Empty;
-            byte[] decryted = Convert.FromBase64String(pass);
+            byte[] decryted = Encoding.UTF8.GetBytes(pass);
             result = System.Text.Encoding.Unicode.GetString(decryted);
             return result;
          }
@@ -74,8 +74,6 @@ namespace HealthyDiet.clases
                     id += preid[i];
                 }
             }
-
-
             
             return id;
         }

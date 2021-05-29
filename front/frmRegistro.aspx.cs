@@ -16,18 +16,29 @@ namespace HealthyDiet.front
         public string idFood = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (!IsPostBack)
+            {
+                ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
+            }
+            else
+            {
+                cardRegistro.Style.Remove("display");
+            }
+
+            if (Session["idUser"] != null)
+            {
+                Response.Redirect("frmPrincipal.aspx");
+            }
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             try
             {
-                //string pass = hash.HashPass(txtContraseña.Value);
+                string pass = hash.HashPass(txtContraseña.Value);
                 string id = hash.HashId(txtNombre.Value, Convert.ToString(DateTime.Now), txtEdad.Value);
                 //LLAMAR HAS PASS
-                if (queys.Registrar(id, txtNombre.Value, txtApPaterno.Value, txtApMaterno.Value, Convert.ToString(ddlSexo.SelectedValue), txtEdad.Value, txtCorreo.Value, txtContraseña.Value))
+                if (queys.Registrar(id, txtNombre.Value, txtApPaterno.Value, txtApMaterno.Value, Convert.ToString(ddlSexo.SelectedValue), txtEdad.Value, txtCorreo.Value, pass))
                 {
                     Session["idUser"] = queys.getId(txtCorreo.Value);
                     Response.Redirect("frmPlanMensual.aspx");
@@ -35,13 +46,13 @@ namespace HealthyDiet.front
                 else
                 {
                     lblRespuesta.Text = "¡Ha ocurrido un error!";
-                    lblRespuesta.CssClass = "alert alert-warning";
+                    lblRespuesta.CssClass = "alert alert-warning m-1";
                 }
             }
             catch (Exception)
             {
                 lblRespuesta.Text = "¡Ups! Algo salió mal! Algo ocurrió con nuestra base de datos.";
-                lblRespuesta.CssClass = "";
+                lblRespuesta.CssClass = "alert alert-warning m-1";
             }
         }
     }

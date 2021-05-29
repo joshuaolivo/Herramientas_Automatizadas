@@ -10,9 +10,19 @@ namespace HealthyDiet.front
 {
     public partial class index : System.Web.UI.Page
     {
+        cHash hash = new cHash();
         cQuerys querys = new cQuerys();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
+            }
+            else
+            {
+                cardMen.Style.Remove("display");
+            }
+
             if (Session["idUser"] != null)
             {
                 Response.Redirect("frmPrincipal.aspx");
@@ -21,7 +31,25 @@ namespace HealthyDiet.front
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                string inputPass = hash.HashPass(txtPass.Value);
+                bool result = querys.Login(txtCorreo.Value, inputPass);
+                if (result)
+                {
+                    Session["idUser"] = querys.getId(txtCorreo.Value);
+                    Response.Redirect("frmPrincipal.aspx");
+                }
+                else
+                {
+                    lblRespuesta.Text = "Correo o contraseña incorrectos";
+                    lblRespuesta.CssClass = "alert alert-danger m-1";
+                }
+            }
+            catch (Exception)
+            {
+
+            }
             Session["idUser"] = querys.getId(txtCorreo.Value);
             Response.Redirect("frmPrincipal.aspx?parametro=465");
         }

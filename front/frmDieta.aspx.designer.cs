@@ -24,6 +24,15 @@ namespace HealthyDiet.front
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control cardFatSecret.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cardFatSecret;
+
+        /// <summary>
         /// Control txtAlimento.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace HealthyDiet.front
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gridAlimentos;
+
+        /// <summary>
+        /// Control cardInfoUser.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cardInfoUser;
 
         /// <summary>
         /// Control lblCaloriasAC.
@@ -157,6 +175,15 @@ namespace HealthyDiet.front
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrasasF;
+
+        /// <summary>
+        /// Control cardDieta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cardDieta;
 
         /// <summary>
         /// Control lblMedida.
