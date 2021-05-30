@@ -31,6 +31,10 @@ namespace HealthyDiet.front
                 txtMeses.Text = (time+1).ToString();
                 txtMeses.Enabled = false;
             }
+
+            cardPlan.Style.Add("display", "none");
+            cardResumen.Style.Add("display", "none");
+            ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
         }
 
         protected void btnPlan_Click(object sender, EventArgs e)

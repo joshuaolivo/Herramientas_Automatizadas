@@ -38,6 +38,9 @@ namespace HealthyDiet.front
             gdvAvance.DataSource = querys.FillInProgres(id);
             gdvAvance.DataBind();
 
+            cardInfo.Style.Add("display", "none");
+            cardAvance.Style.Add("display", "none");
+            ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)

@@ -30,6 +30,10 @@ namespace HealthyDiet.front
             {
                 lblDita.InnerText = "Es tiempo de crear tu dieta";
             }
+
+            cardPersonal.Style.Add("display", "none");
+            cardDieta.Style.Add("display", "none");
+            ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
         }
 
         protected void imgInfo_Click(object sender, ImageClickEventArgs e)

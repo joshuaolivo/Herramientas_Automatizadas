@@ -16,6 +16,7 @@ namespace HealthyDiet.front
         {
             if (!IsPostBack)
             {
+                cardLog.Style.Add("display", "none");
                 ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
             }
             else

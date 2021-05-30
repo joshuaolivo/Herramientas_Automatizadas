@@ -34,7 +34,7 @@
         </div>
         <div class="container bg-transparent tab-content" id="pills-tabContent">
             <div class="row justify-content-md-center p-1 tab-pane fade show active h-75" id="pills-resumen" role="tabpanel" aria-labelledby="pills-resumen-tab">
-                <div class="col bg-white text-center rounded shadow p-3 m-1" id="cardInfo" style="display:none;">
+                <div class="col bg-white text-center rounded shadow p-3 m-1" id="cardInfo" runat="server">
                     <h3>Tu información personal</h3>
                     <hr />
                     <div class="row p-1 justify-content-center">
@@ -89,9 +89,9 @@
                         Información registrada el: <asp:Label ID="lblFecha" runat="server" Text="Fecha"></asp:Label>
                     </div>
                 </div>
-                <div class="col bg-white text-center rounded shadow p-3 m-1" id="cardAvance" style="display:none;">
-&nbsp;<h3>Resumen de avance</h3>
-&nbsp;<hr />
+                <div class="col bg-white text-center rounded shadow p-3 m-1" id="cardAvance" runat="server">
+                    <h3>Resumen de avance</h3>
+                    <hr />
                     <asp:GridView ID="gdvAvance" runat="server" CssClass="table table-hover table-sm table-borderless rounded-lg" HeaderStyle-CssClass="table-active">
                     </asp:GridView>
                     <br />

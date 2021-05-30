@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-12 col-lg-4 h-100 align-items-center text-center" id="cardMen" style="display:none" runat="server">
+                <div class="col-12 col-lg-4 h-100 align-items-center text-center" id="cardMen" runat="server">
                     <h1 class="display-3 text-center">Healthy Diet</h1>
                     <hr />
                     <h1 class="display-3 text-center">Nutrición al alcance de la mano</h1>

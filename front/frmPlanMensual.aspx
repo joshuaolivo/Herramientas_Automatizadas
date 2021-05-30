@@ -33,7 +33,7 @@
         </div>
         <div class="container bg-transparent">
             <div class="row justify-content-md-center p-3">
-                <div class="col-lg-6 bg-white text-center rounded shadow p-3" id="cardPlan" style="display:none;">
+                <div class="col-lg-6 bg-white text-center rounded shadow p-3" id="cardPlan" runat="server">
                     <asp:Label ID="Label1" runat="server" Text="Plan mensual" CssClass="h1"></asp:Label>
                     <hr />
                     <div class="form-group">
@@ -75,7 +75,7 @@
                     <asp:Button ID="btnPlan" runat="server" OnClick="btnPlan_Click" Text="Crear Plan" CssClass="btn badge-pill btn-success w-25"/>
                 </div>
             </div>
-            <div class="row justify-content-md-center p-3"  id="cardResumen" style="display:none;">
+            <div class="row justify-content-md-center p-3"  id="cardResumen" runat="server">
                 <div class="col-lg-6 bg-white text-center rounded shadow">
                     <div class="form-group">
                         <asp:Label ID="Label3" runat="server" Text="Objetivo" CssClass="h6 w-75"></asp:Label>

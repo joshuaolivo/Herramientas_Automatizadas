@@ -34,7 +34,7 @@
         </div>
         <div class="container bg-transparent">
             <div class="row justify-content-md-center">
-                <div class="col-lg-6 bg-white text-center rounded shadow" id="cardRegistro" style="display:none;" runat="server">
+                <div class="col-lg-6 bg-white text-center rounded shadow" id="cardRegistro" runat="server">
                     <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
                     <h1 class="align-self-center">CREAR CUENTA</h1>
                     <hr />

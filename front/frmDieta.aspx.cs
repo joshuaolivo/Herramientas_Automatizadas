@@ -25,6 +25,9 @@ namespace HealthyDiet.front
         {
             if (!IsPostBack)
             {
+                cardFatSecret.Style.Add("display", "none");
+                cardInfoUser.Style.Add("display", "none");
+                cardDieta.Style.Add("display", "none");
                 ClientScript.RegisterStartupScript(GetType(), "animacion", "cargarAnim();", true);
             }
             else
