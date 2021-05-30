@@ -35,7 +35,7 @@
         <div class="container bg-transparent p-3">
             <div class="row justify-content-md-center">
                 <div class="col-lg-6 text-center rounded shadow-lg bg-light p-1" id="cardLog" runat="server">
-                    <img src="../images/Icon.png" class="img-fluid h-auto w-75" alt="HealthyDiet"/><br />
+                    <img src="../images/Icon.png" class="img-fluid h-auto w-50" alt="HealthyDiet"/><br />
                     <asp:Label ID="lblEmpresa" runat="server" Text="Label" CssClass="h5">HealthyDiet</asp:Label><br />
                     <asp:Label ID="lblSesion" runat="server" Text="Label" CssClass="h3">Iniciar Sesion</asp:Label><br />
                     <hr />

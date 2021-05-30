@@ -160,8 +160,16 @@ namespace HealthyDiet.front
                     foreach (dynamic prod in listProductos)
                     {
                         if (result_info.Contains("brand_name"))
-                        {
-                            string porcion = prod.servings.serving.metric_serving_amount + prod.servings.serving.metric_serving_unit;
+                        { 
+                            string porcion = "";
+                            if (result_info.Contains("metric_serving_amount"))
+                            {
+                                porcion = prod.servings.serving.metric_serving_amount + prod.servings.serving.metric_serving_unit;
+                            }
+                            else
+                            {
+                                porcion = prod.servings.serving.serving_description;
+                            }
                             lblMedida.Text = porcion;
                             var IDFood = prod.food_id;
                             txtComida.Text = prod.food_name;
@@ -172,7 +180,15 @@ namespace HealthyDiet.front
                         }
                         else
                         {
-                            string porcion = prod.servings.serving[0].metric_serving_amount + prod.servings.serving[0].metric_serving_unit;
+                            string porcion = "";
+                            if (result_info.Contains("metric_serving_amount"))
+                            {
+                                porcion = prod.servings.serving[0].metric_serving_amount + prod.servings.serving[0].metric_serving_unit;
+                            }
+                            else
+                            {
+                                porcion = prod.servings.serving[0].serving_description;
+                            }
                             lblMedida.Text = porcion;
                             var IDFood = prod.food_id;
                             txtComida.Text = prod.food_name;
