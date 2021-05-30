@@ -91,7 +91,7 @@ namespace HealthyDiet.front
             
             if(respuesta == 0)
             {
-                addAlimento();
+                addFood();
             }
         }
 
@@ -99,14 +99,14 @@ namespace HealthyDiet.front
         {
             if (txtAlimento.Text != "")
             {
-                obtenerAlimento();
+                getFood();
             }
         }
 
         protected void gridAlimentos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gridAlimentos.PageIndex = e.NewPageIndex;
-            obtenerAlimento();
+            getFood();
         }
 
         protected void gridAlimentos_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -116,12 +116,12 @@ namespace HealthyDiet.front
                 int index = Convert.ToInt32(e.CommandArgument);
                 GridViewRow id_Rows = gridAlimentos.Rows[index];
                 string idalimento = id_Rows.Cells[1].Text;
-                obtenerInfo(int.Parse(idalimento));
+                getInfo(int.Parse(idalimento));
             }
         }
 
 
-        private void obtenerAlimento()
+        private void getFood()
         {
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = AppDomain.CurrentDomain.BaseDirectory + @"front\fatSecretAPI\fs\fs.exe";
@@ -141,7 +141,7 @@ namespace HealthyDiet.front
             gridAlimentos.DataBind();
         }
 
-        private void obtenerInfo(int idF)
+        private void getInfo(int idF)
         {
             ProcessStartInfo start = new ProcessStartInfo();
             //start.FileName = @"F:\elagu\Documentos\Visual Studio 2019\Proyectos\HealthyDietAPIPython\info\info.exe";
@@ -186,7 +186,7 @@ namespace HealthyDiet.front
             }
         }
 
-        private void addAlimento()
+        private void addFood()
         {
             lblMedida.Text = "";
             txtCal.Text = "";
