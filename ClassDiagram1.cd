@@ -1,2 +1,158 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="HealthyDiet.clases.cCalories">
+    <Position X="6.5" Y="14.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>clases\cCalories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.clases.cConnection">
+    <Position X="0.5" Y="15.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAEAAAAAAAAAAAQAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>clases\cConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.clases.cHash">
+    <Position X="1" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAACAgAAAAAAAAAAAAABAIAAAAA=</HashCode>
+      <FileName>clases\cHash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.clases.cPlan">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQQAQAAAAAwIAAAAQAAAAAAQAAACAAAAA=</HashCode>
+      <FileName>clases\cPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.clases.cQuerys">
+    <Position X="3.25" Y="14.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="HealthyDiet.front.index" ManuallyRouted="true">
+      <Path>
+        <Point X="5" Y="4.184" />
+        <Point X="5" Y="7.378" />
+        <Point X="5.344" Y="7.378" />
+        <Point X="5.344" Y="14.125" />
+        <Point X="4.375" Y="14.125" />
+        <Point X="4.375" Y="14.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAEFAAAIAAEAAIhAAAgAAYAAgAAAIAQAgwAgAAAAQ=</HashCode>
+      <FileName>clases\cQuerys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.front.fatSecretAPI.API">
+    <Position X="10" Y="14.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAACAAAIAAAA=</HashCode>
+      <FileName>front\fatSecretAPI\API.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.front.frmDieta">
+    <Position X="6.25" Y="10" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="HealthyDiet.front.frmDieta.JsonResult" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>front\frmDieta.aspx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gKgARAIAAwAGBSAEBAAgEAAAYgAQiMIGCAARAiIKAhI=</HashCode>
+      <FileName>front\frmDieta.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.front.frmLog">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAIIACAAABAACgCAAEgAAMAAAAEQAACAAAAIgAAA=</HashCode>
+      <FileName>front\frmLog.aspx.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="cHash" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HealthyDiet.front.frmPerfil">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAgABABACFBAAABAAAACEAIAAAAAIAQAKIIAIYAgQ=</HashCode>
+      <FileName>front\frmPerfil.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.front.frmPlanMensual">
+    <Position X="9.5" Y="5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACBgGEAAEAAABCAAAAgAkAAAIQAQBAAQAAAoACJAAgA=</HashCode>
+      <FileName>front\frmPlanMensual.aspx.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="cPlan" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HealthyDiet.front.frmPrincipal">
+    <Position X="6.25" Y="7.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAQEQCAAAAAEEBAIBAAAAAACEAAAAIIAgA=</HashCode>
+      <FileName>front\frmPrincipal.aspx.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="frmDieta" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HealthyDiet.front.frmRegistro">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABBEAAAAAAAABAACIAAAEoAAICAAAAIAACDIAAIgAAA=</HashCode>
+      <FileName>front\frmRegistro.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthyDiet.front.index">
+    <Position X="4" Y="2.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAABAACAAAAAgAAAQAACBAAACAIAAJgAAA=</HashCode>
+      <FileName>front\index.aspx.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="frmLog" />
+      <Property Name="frmRegistro" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
