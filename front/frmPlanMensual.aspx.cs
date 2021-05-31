@@ -51,6 +51,8 @@ namespace HealthyDiet.front
             lblObje.Text = Convert.ToString(calorias);
 
             //RAUL AQUI QUIERO QUE SALGA UN MENSA QUE DIGA PLAN CREADO Y GURDADO CON EXITO
+
+            //Anton... Aqui, cuando te falta agregar un dato al form carga la pagina y manda un error en la depuracion, falta validar
             resultado = queys.saveDiet(id, Convert.ToInt32(txtMeses.Text), lblObjetivo.Text, calorias);
             resultado = queys.setDataFIsic(id, Convert.ToInt32(txtAltura.Text), Convert.ToSingle(txtPeso.Text));
             btnPlan.Enabled = false;
