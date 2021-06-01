@@ -39,24 +39,32 @@ namespace HealthyDiet.front
 
         protected void btnPlan_Click(object sender, EventArgs e)
         {
-            string objetivo = purpose();
-            string sexo = queys.gender(id);
-            int calorias;
-            int resultado;
+            if (txtMeses.Text != "" && txtEdad.Text != "" && txtAltura.Text != "" && txtPeso.Text != "")
+            {
+                string objetivo = purpose();
+                string sexo = queys.gender(id);
+                int calorias;
+                int resultado;
 
-            cPlan plan = new cPlan(Convert.ToInt32(txtMeses.Text), Convert.ToInt32(txtEdad.Text), Convert.ToInt32(txtAltura.Text), Convert.ToSingle(txtPeso.Text), sexo, Convert.ToInt32(ddlActividad.Text), objetivo);
-            calorias = Convert.ToInt32(Math.Round(plan.NewCobsumption()));
-            lblObjetivo.Text = ddlObjetivo.Text;
-            lblBAsal.Text = Convert.ToString(Math.Round(plan.BasalCalories()));
-            lblObje.Text = Convert.ToString(calorias);
+                cPlan plan = new cPlan(Convert.ToInt32(txtMeses.Text), Convert.ToInt32(txtEdad.Text), Convert.ToInt32(txtAltura.Text), Convert.ToSingle(txtPeso.Text), sexo, Convert.ToInt32(ddlActividad.Text), objetivo);
+                calorias = Convert.ToInt32(Math.Round(plan.NewCobsumption()));
+                lblObjetivo.Text = ddlObjetivo.Text;
+                lblBAsal.Text = Convert.ToString(Math.Round(plan.BasalCalories()));
+                lblObje.Text = Convert.ToString(calorias);
 
-            //RAUL AQUI QUIERO QUE SALGA UN MENSA QUE DIGA PLAN CREADO Y GURDADO CON EXITO
+                lblRespuesta.Text = "Plan creado y guardado con éxito.";
+                lblRespuesta.CssClass = "alert alert-success m-1";
 
-            //Anton... Aqui, cuando te falta agregar un dato al form carga la pagina y manda un error en la depuracion, falta validar
-            resultado = queys.saveDiet(id, Convert.ToInt32(txtMeses.Text), lblObjetivo.Text, calorias);
-            resultado = queys.setDataFIsic(id, Convert.ToInt32(txtAltura.Text), Convert.ToSingle(txtPeso.Text));
-            btnPlan.Enabled = false;
-           
+                //Anton... Aqui, cuando te falta agregar un dato al form carga la pagina y manda un error en la depuracion, falta validar
+                resultado = queys.saveDiet(id, Convert.ToInt32(txtMeses.Text), lblObjetivo.Text, calorias);
+                resultado = queys.setDataFIsic(id, Convert.ToInt32(txtAltura.Text), Convert.ToSingle(txtPeso.Text));
+                btnPlan.Enabled = false;
+            }
+            else
+            {
+                lblRespuesta.Text = "No se han llenado todos los campos";
+                lblRespuesta.CssClass = "alert alert-danger m-1";
+            }
         }
 
         protected void btnContinuar_Click(object sender, EventArgs e)

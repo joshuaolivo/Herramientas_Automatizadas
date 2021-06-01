@@ -73,6 +73,7 @@
                         </asp:DropDownList>
                     </div>
                     <asp:Button ID="btnPlan" runat="server" OnClick="btnPlan_Click" Text="Crear Plan" CssClass="btn badge-pill btn-success w-25"/>
+                    <asp:Label ID="lblRespuesta" runat="server" Text=""></asp:Label>
                 </div>
             </div>
             <div class="row justify-content-md-center p-3"  id="cardResumen" runat="server">

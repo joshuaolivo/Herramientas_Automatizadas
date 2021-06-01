@@ -32,6 +32,11 @@ namespace HealthyDiet.front
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            login();
+        }
+
+        private void login()
+        {
             try
             {
                 string inputPass = hash.HashPass(txtContraseña.Value);

@@ -12,7 +12,7 @@ namespace HealthyDiet.clases
     public class cHash
     { 
 
-
+        /*
          public static byte[] GenerateSalt()
          {
             const int saltLength = 32;
@@ -45,7 +45,7 @@ namespace HealthyDiet.clases
                 return sha256.ComputeHash(combinedHash);
             }
         }
-
+        */
 
         public string HashPass(string pass)
          {   

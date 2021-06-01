@@ -144,7 +144,6 @@ namespace HealthyDiet.front
         private void getInfo(int idF)
         {
             ProcessStartInfo start = new ProcessStartInfo();
-            //start.FileName = @"F:\elagu\Documentos\Visual Studio 2019\Proyectos\HealthyDietAPIPython\info\info.exe";
             start.FileName = AppDomain.CurrentDomain.BaseDirectory + @"front\fatSecretAPI\info\info.exe";
             start.Arguments = string.Format("{0}", idF);
             start.UseShellExecute = false;
