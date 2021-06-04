@@ -53,7 +53,7 @@ namespace HealthyDiet.front
             }
             catch (Exception)
             {
-                .Text = "¡Ups! Algo salió mal! Algo ocurrió con nuestra base de datos.";
+                lblRespuesta.Text = "¡Ups! Algo salió mal! Algo ocurrió con nuestra base de datos.";
                 lblRespuesta.CssClass = "alert alert-warning m-1";
             }
         }

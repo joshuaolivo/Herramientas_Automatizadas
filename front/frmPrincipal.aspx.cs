@@ -56,6 +56,11 @@ namespace HealthyDiet.front
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            cerrarSesion
+        }
+
+        protected void cerrarSesion()
+        {
             Session["idUser"] = null;
             Response.Redirect("frmLog.aspx");
         }
