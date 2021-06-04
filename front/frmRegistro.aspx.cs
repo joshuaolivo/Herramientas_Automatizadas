@@ -42,13 +42,16 @@ namespace HealthyDiet.front
                 //LLAMAR HAS PASS
                 if (queys.Registrar(id, txtNombre.Value, txtApPaterno.Value, txtApMaterno.Value, Convert.ToString(ddlSexo.SelectedValue), txtEdad.Value, txtCorreo.Value, pass))
                 {
-                    Session["idUser"] = queys.getId(txtCorreo.Value);
-                    Response.Redirect("frmPlanMensual.aspx");
-                }
-                else
-                {
-                    lblRespuesta.Text = "¡Ha ocurrido un error!";
-                    lblRespuesta.CssClass = "alert alert-warning m-1";
+                    if (txtCorreo.Value != txtCorreo2.Value & txtContraseña.Value != txtContraseña2.Value)
+                    {
+                        lblRespuesta.Text = "¡Revise la confirmación de correo y contraseña!";
+                        lblRespuesta.CssClass = "alert alert-warning m-1";
+                    }
+                    else
+                    {
+                        Session["idUser"] = queys.getId(txtCorreo.Value);
+                        Response.Redirect("frmPlanMensual.aspx");
+                    }
                 }
             }
             catch (Exception)
