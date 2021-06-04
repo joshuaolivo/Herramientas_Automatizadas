@@ -56,7 +56,7 @@ namespace HealthyDiet.front
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            cerrarSesion
+            cerrarSesion();
         }
 
         protected void cerrarSesion()
