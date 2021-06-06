@@ -86,12 +86,14 @@ namespace HealthyDiet.front
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            
-            int respuesta = queys.pushFood(id, txtComida.Text, Convert.ToSingle(0), Convert.ToSingle(txtProte.Text), Convert.ToSingle(txtCarbos.Text), Convert.ToSingle(txtGrasas.Text), Convert.ToSingle(txtCal.Text));
-            
-            if(respuesta == 0)
+            if (txtComida.Text != "" && txtProte.Text != "" && txtCarbos.Text != "" && txtGrasas.Text != "" && txtCal.Text != "")
             {
-                addFood();
+                int respuesta = queys.pushFood(id, txtComida.Text, Convert.ToSingle(0), Convert.ToSingle(txtProte.Text), Convert.ToSingle(txtCarbos.Text), Convert.ToSingle(txtGrasas.Text), Convert.ToSingle(txtCal.Text));
+
+                if (respuesta == 0)
+                {
+                    addFood();
+                }
             }
         }
 

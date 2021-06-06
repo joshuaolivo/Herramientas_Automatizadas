@@ -53,6 +53,11 @@ namespace HealthyDiet.front
                         lblRespuesta.CssClass = "alert alert-warning m-1";
                     }
                 }
+                else
+                {
+                    lblRespuesta.Text = "El usuario ya está registrado";
+                    lblRespuesta.CssClass = "alert alert-warning m-1";
+                }
             }
             catch (Exception)
             {
